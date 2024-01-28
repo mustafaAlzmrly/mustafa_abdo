@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-AMS_PRO_MAX",
+      "appliesTo": "AMS_PRO_MAX/",
+      "type": "launch"
+    }
+  ]
+}
