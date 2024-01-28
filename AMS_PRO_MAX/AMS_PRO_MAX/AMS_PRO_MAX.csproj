@@ -172,6 +172,7 @@
     <Compile Include="User.cs">
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserP\Cls_Login.cs" />
     <Compile Include="UserP\FRM_ADDuser.cs">
       <SubType>Form</SubType>
     </Compile>
