@@ -403,6 +403,26 @@ namespace AMS_PRO_MAX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_open_box_30px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_open_box_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_open_box_38px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_open_box_38px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_rotate_right_38px {
             get {
                 object obj = ResourceManager.GetObject("icons8_rotate_right_38px", resourceCulture);

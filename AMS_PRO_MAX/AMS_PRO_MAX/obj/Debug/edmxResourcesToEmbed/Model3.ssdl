@@ -47,6 +47,16 @@
     <Property Name="ExpiryDate" Type="date" />
     <Property Name="QuantityAvailable" Type="int" />
   </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="varchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Details" Type="varchar" MaxLength="100" />
+    <Property Name="Timestamp" Type="datetime" />
+  </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="UserID" />
@@ -112,6 +122,7 @@
     <EntitySet Name="InvoiceItems" EntityType="Self.InvoiceItems" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Invoices" EntityType="Self.Invoices" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Inventory__ItemI__3B75D760" Association="Self.FK__Inventory__ItemI__3B75D760">
       <End Role="Items" EntitySet="Items" />

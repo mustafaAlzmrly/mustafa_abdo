@@ -30,6 +30,7 @@ namespace AMS_PRO_MAX
         public virtual DbSet<InvoiceItem> InvoiceItems { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<Log> Logs { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

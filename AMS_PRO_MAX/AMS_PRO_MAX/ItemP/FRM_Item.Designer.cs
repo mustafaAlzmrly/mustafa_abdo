@@ -1,6 +1,7 @@
 ﻿
 namespace AMS_PRO_MAX
 {
+    
     partial class FRM_HOME
     {
         /// <summary>
@@ -32,14 +33,14 @@ namespace AMS_PRO_MAX
             this.components = new System.ComponentModel.Container();
             this.pn_cat = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityAvailableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expiryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_AMS_PRODataSet2 = new AMS_PRO_MAX.DB_AMS_PRODataSet2();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_AMS_PRODataSet4 = new AMS_PRO_MAX.DB_AMS_PRODataSet4();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_eidit = new System.Windows.Forms.Button();
@@ -48,15 +49,13 @@ namespace AMS_PRO_MAX
             this.btn_sear = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTableAdapter = new AMS_PRO_MAX.DB_AMS_PRODataSet2TableAdapters.ItemsTableAdapter();
+            this.itemsTableAdapter1 = new AMS_PRO_MAX.DB_AMS_PRODataSet4TableAdapters.ItemsTableAdapter();
             this.pn_cat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet4)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_cat
@@ -74,19 +73,21 @@ namespace AMS_PRO_MAX
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Beige;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itemIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.quantityAvailableDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.expiryDateDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.itemsBindingSource1;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView1.DataSource = this.itemsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersWidth = 40;
             this.dataGridView1.RowTemplate.Height = 26;
@@ -94,69 +95,66 @@ namespace AMS_PRO_MAX
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // itemIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "ItemID";
-            this.itemIDDataGridViewTextBoxColumn.HeaderText = "معرف الصنف";
-            this.itemIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
-            this.itemIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemIDDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ItemID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "رقم الصنف";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 120;
             // 
-            // nameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "اسم الصنف";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 210;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn2.FillWeight = 200F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "اسم الصنف";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // quantityAvailableDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.quantityAvailableDataGridViewTextBoxColumn.DataPropertyName = "QuantityAvailable";
-            this.quantityAvailableDataGridViewTextBoxColumn.HeaderText = "الكمية";
-            this.quantityAvailableDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantityAvailableDataGridViewTextBoxColumn.Name = "quantityAvailableDataGridViewTextBoxColumn";
-            this.quantityAvailableDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantityAvailableDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn4.HeaderText = "السعر";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // priceDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "السعر";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "QuantityAvailable";
+            this.dataGridViewTextBoxColumn6.HeaderText = "الكمية";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // expiryDateDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.expiryDateDataGridViewTextBoxColumn.DataPropertyName = "ExpiryDate";
-            this.expiryDateDataGridViewTextBoxColumn.HeaderText = "تاريخ الانتهاء";
-            this.expiryDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.expiryDateDataGridViewTextBoxColumn.Name = "expiryDateDataGridViewTextBoxColumn";
-            this.expiryDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.expiryDateDataGridViewTextBoxColumn.Width = 140;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ExpiryDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "الصلاحية";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.descriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "الوصف";
-            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn3.HeaderText = "الوصف";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // itemsBindingSource1
+            // itemsBindingSource
             // 
-            this.itemsBindingSource1.DataMember = "Items";
-            this.itemsBindingSource1.DataSource = this.dB_AMS_PRODataSet2;
+            this.itemsBindingSource.DataMember = "Items";
+            this.itemsBindingSource.DataSource = this.dB_AMS_PRODataSet4;
             // 
-            // dB_AMS_PRODataSet2
+            // dB_AMS_PRODataSet4
             // 
-            this.dB_AMS_PRODataSet2.DataSetName = "DB_AMS_PRODataSet2";
-            this.dB_AMS_PRODataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dB_AMS_PRODataSet4.DataSetName = "DB_AMS_PRODataSet4";
+            this.dB_AMS_PRODataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -268,14 +266,9 @@ namespace AMS_PRO_MAX
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // itemsBindingSource
+            // itemsTableAdapter1
             // 
-            this.itemsBindingSource.DataMember = "Items";
-            this.itemsBindingSource.DataSource = this.dB_AMS_PRODataSet2;
-            // 
-            // itemsTableAdapter
-            // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
+            this.itemsTableAdapter1.ClearBeforeFill = true;
             // 
             // FRM_HOME
             // 
@@ -289,12 +282,11 @@ namespace AMS_PRO_MAX
             this.Load += new System.EventHandler(this.FRM_HOME_Load);
             this.pn_cat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,17 +301,23 @@ namespace AMS_PRO_MAX
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox txt_sear;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private DB_AMS_PRODataSet2 dB_AMS_PRODataSet2;
-        private System.Windows.Forms.BindingSource itemsBindingSource;
-        private DB_AMS_PRODataSet2TableAdapters.ItemsTableAdapter itemsTableAdapter;
+       
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Button btn_sear;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityAvailableDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expiryDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource itemsBindingSource1;
-        public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Button btn_sear;
+        private DB_AMS_PRODataSet4 dB_AMS_PRODataSet4;
+        private System.Windows.Forms.BindingSource itemsBindingSource;
+        private DB_AMS_PRODataSet4TableAdapters.ItemsTableAdapter itemsTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

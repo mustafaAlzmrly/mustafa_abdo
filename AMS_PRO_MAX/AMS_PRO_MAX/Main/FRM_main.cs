@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AMS_PRO_MAX.Logs;
 
 namespace AMS_PRO_MAX
 {
@@ -18,16 +19,30 @@ namespace AMS_PRO_MAX
         private Cls_alert alert;
         FRM_HOME fRM_HOME ;
         details details;
+        Logs.Logs logs;
+        User user1 = new User();
+        string fullname;
         public Form1()
         {
             InitializeComponent();
+            
+        }
+        public Form1(User user)
+        {
+            InitializeComponent();
+            user1 = user;
+        }
+        public void getfullname(User user)
+        {
+             
+            fullname= user.Fullname;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
             
-            User u = new User();
+            
             
 
             if (pn_home.Visible == false)
@@ -78,7 +93,7 @@ namespace AMS_PRO_MAX
         private void button3_Click(object sender, EventArgs e)
         {
             txt_cot_alert.Text = Convert.ToString(db.Alerts.Count());
-            fRM_HOME = new FRM_HOME();
+            fRM_HOME = new FRM_HOME(fullname);
             pn.Controls.Clear();
             pn.Controls.Add(fRM_HOME.pn_cat);
             db = new DB_AMS_PROEntities5();
@@ -256,6 +271,13 @@ namespace AMS_PRO_MAX
         private void txt_role_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_logs_Click(object sender, EventArgs e)
+        {
+            logs = new Logs.Logs();
+            logs.Show();
+            
         }
     }
 }

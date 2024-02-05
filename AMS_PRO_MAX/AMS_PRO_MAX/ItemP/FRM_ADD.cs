@@ -13,10 +13,7 @@ namespace AMS_PRO_MAX
 {
     public partial class FRM_ADD : Form
     {
-        private Cls_AddNewItem AddEdit;
         
-        DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5();
-
         
 
         public int id;
@@ -39,9 +36,14 @@ namespace AMS_PRO_MAX
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            AddEdit = new Cls_AddNewItem();
-
-            AddEdit.AddAndEdit(id,this);
+            if(id==0)
+            {
+                DatabaseHelper.AddNewItem(this);
+            }
+            else
+            {
+                DatabaseHelper.EditSelectedItem(id,this);
+            }
           
         }
 

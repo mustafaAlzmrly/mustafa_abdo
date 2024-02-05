@@ -54,6 +54,16 @@
     <NavigationProperty Name="Inventories" Relationship="Self.FK__Inventory__ItemI__3B75D760" FromRole="Items" ToRole="Inventory" />
     <NavigationProperty Name="InvoiceItems" Relationship="Self.FK__InvoiceIt__ItemI__4222D4EF" FromRole="Items" ToRole="InvoiceItems" />
   </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Details" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Timestamp" Type="DateTime" Precision="3" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="UserID" />
@@ -120,6 +130,7 @@
     <EntitySet Name="InvoiceItems" EntityType="Self.InvoiceItem" />
     <EntitySet Name="Invoices" EntityType="Self.Invoice" />
     <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="Logs" EntityType="Self.Log" />
     <EntitySet Name="Users" EntityType="Self.User" />
     <AssociationSet Name="FK__Inventory__ItemI__3B75D760" Association="Self.FK__Inventory__ItemI__3B75D760">
       <End Role="Items" EntitySet="Items" />

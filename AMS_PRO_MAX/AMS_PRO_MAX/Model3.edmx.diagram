@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fffdb65b8ef04834b4143669518d96fa" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_AMS_PROModel.Alert" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+      <Diagram DiagramId="ce6a8b6054d644c3a740695e39c1a27f" Name="Diagram1" ZoomLevel="125">
+        <EntityTypeShape EntityType="DB_AMS_PROModel.Alert" Width="1.5" PointX="7.125" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_AMS_PROModel.Inventory" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_AMS_PROModel.InvoiceItem" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_AMS_PROModel.Invoice" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_AMS_PROModel.Item" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_AMS_PROModel.Log" Width="1.5" PointX="2.75" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_AMS_PROModel.User" Width="1.5" PointX="1.5" PointY="11.75" IsExpanded="true" />
         <AssociationConnector Association="DB_AMS_PROModel.FK__Inventory__ItemI__3B75D760" ManuallyRouted="false" />
         <AssociationConnector Association="DB_AMS_PROModel.FK__InvoiceIt__Invoi__412EB0B6" ManuallyRouted="false" />

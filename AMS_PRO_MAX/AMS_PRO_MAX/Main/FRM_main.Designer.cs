@@ -67,6 +67,7 @@ namespace AMS_PRO_MAX
             this.btn_alert = new System.Windows.Forms.Button();
             this.txt_cot_alert = new System.Windows.Forms.Label();
             this.pn_lift = new System.Windows.Forms.Panel();
+            this.btn_logs = new System.Windows.Forms.Button();
             this.btn_users = new System.Windows.Forms.Button();
             this.pn_home.SuspendLayout();
             this.bunifuCards4.SuspendLayout();
@@ -603,6 +604,7 @@ namespace AMS_PRO_MAX
             // 
             this.pn_lift.AccessibleName = "pn_con";
             this.pn_lift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.pn_lift.Controls.Add(this.btn_logs);
             this.pn_lift.Controls.Add(this.btn_users);
             this.pn_lift.Controls.Add(this.txt_cot_alert);
             this.pn_lift.Controls.Add(this.btn_alert);
@@ -616,6 +618,26 @@ namespace AMS_PRO_MAX
             this.pn_lift.Name = "pn_lift";
             this.pn_lift.Size = new System.Drawing.Size(250, 753);
             this.pn_lift.TabIndex = 9;
+            // 
+            // btn_logs
+            // 
+            this.btn_logs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btn_logs.FlatAppearance.BorderSize = 0;
+            this.btn_logs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logs.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.btn_logs.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_logs.Image = global::AMS_PRO_MAX.Properties.Resources.icons8_open_box_30px;
+            this.btn_logs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_logs.Location = new System.Drawing.Point(6, 616);
+            this.btn_logs.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_logs.Name = "btn_logs";
+            this.btn_logs.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_logs.Size = new System.Drawing.Size(247, 64);
+            this.btn_logs.TabIndex = 27;
+            this.btn_logs.Text = "السجل";
+            this.btn_logs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_logs.UseVisualStyleBackColor = false;
+            this.btn_logs.Click += new System.EventHandler(this.btn_logs_Click);
             // 
             // btn_users
             // 
@@ -720,6 +742,7 @@ namespace AMS_PRO_MAX
         private System.Windows.Forms.Panel pn_lift;
         public System.Windows.Forms.Button btn_users;
         public System.Windows.Forms.Label txt_role;
+        public System.Windows.Forms.Button btn_logs;
     }
 }
 

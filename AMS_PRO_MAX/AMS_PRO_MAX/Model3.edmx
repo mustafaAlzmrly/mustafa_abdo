@@ -52,6 +52,16 @@
           <Property Name="ExpiryDate" Type="date" />
           <Property Name="QuantityAvailable" Type="int" />
         </EntityType>
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fullname" Type="varchar" MaxLength="100" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Details" Type="varchar" MaxLength="100" />
+          <Property Name="Timestamp" Type="datetime" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="UserID" />
@@ -117,6 +127,7 @@
           <EntitySet Name="InvoiceItems" EntityType="Self.InvoiceItems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Invoices" EntityType="Self.Invoices" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Inventory__ItemI__3B75D760" Association="Self.FK__Inventory__ItemI__3B75D760">
             <End Role="Items" EntitySet="Items" />
@@ -194,6 +205,16 @@
           <NavigationProperty Name="Inventories" Relationship="Self.FK__Inventory__ItemI__3B75D760" FromRole="Items" ToRole="Inventory" />
           <NavigationProperty Name="InvoiceItems" Relationship="Self.FK__InvoiceIt__ItemI__4222D4EF" FromRole="Items" ToRole="InvoiceItems" />
         </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
@@ -260,6 +281,7 @@
           <EntitySet Name="InvoiceItems" EntityType="Self.InvoiceItem" />
           <EntitySet Name="Invoices" EntityType="Self.Invoice" />
           <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="Logs" EntityType="Self.Log" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="FK__Inventory__ItemI__3B75D760" Association="Self.FK__Inventory__ItemI__3B75D760">
             <End Role="Items" EntitySet="Items" />
@@ -333,6 +355,17 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
                 <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="DB_AMS_PROModel.Log">
+              <MappingFragment StoreEntitySet="Logs">
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

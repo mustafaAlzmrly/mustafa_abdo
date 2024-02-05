@@ -268,7 +268,6 @@ C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\bin\Debug\de\DevEx
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\bin\Debug\es\DevExpress.Office.v19.2.Core.resources.dll
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
-C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.csproj.AssemblyReference.cache
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.details.resources
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.dialog.resources
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.Form1.resources
@@ -286,3 +285,5 @@ C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.csproj.CopyComplete
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.exe
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.pdb
+C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.Logs.Logs.resources
+C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX\obj\Debug\AMS_PRO_MAX.csproj.AssemblyReference.cache
