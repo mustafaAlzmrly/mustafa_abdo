@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AMS_PRO_MAX.UserP;
 
 namespace AMS_PRO_MAX
 {
@@ -15,130 +15,12 @@ namespace AMS_PRO_MAX
     {
         public string name;
         DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5();
-        User add;
-        Form1 form1;
         public int id;
-        bool state;
         public FRM_ADDuser()
         {
             InitializeComponent();
-        }
-        private bool Save()
-        {
-            dialog dialog = new dialog();
-            form1 = new Form1();
-            // check fields
-
-            if (edt_name.Text == "" || edt_password.Text == "" || edt_username.Text == "")
-            {
-                dialog.Width = this.Width;
-                dialog.label6.Text = "اكمل الحقل لطفا";
-                dialog.Show();
-            }
-            else
-            {
-                // Add or edit
-                var checkDuplicate = CheckDuplicateData();
-                if (id == 0)
-                {
-                    // Add
-                    // Check Duplicate Data
-                    
-                    if (checkDuplicate == true)
-                    {
-                        dialog.Width = this.Width;
-                        dialog.label6.Text = "اسم المستخدم مكرر";
-                        dialog.Show();
-
-                    }
-                    else
-                    {
-                        // Add
-                        AddData();
-                        state = true;
-                        dialog.Width = this.Width;
-                        dialog.label6.Text = "تمت اضافة مستخدم جديد من قبل "+name_user();
-                        dialog.Show();
-
-
-
-                    }
-
-                }
-                else
-                {
-                    // Edit
-
-
-
-                }
-            }
-            return state;
-        }
-
-        private bool CheckDuplicateData()
-        {
-            try
-            {
-                db = new DB_AMS_PROEntities5();
-                add = db.Users.Where(x => x.Username == edt_username.Text).FirstOrDefault();
-                if (add == null)
-                {
-                    state = false;
-                }
-                else
-                {
-                    state = true;
-                }
-            }
-            catch
-            {
-                state = false;
-                
-            }
-
-
-            return state;
 
         }
-        private void AddData()
-        {
-            try
-            {
-                
-                db = new DB_AMS_PROEntities5();
-                add = new User()
-                {
-
-                    Fullname = edt_name.Text,
-                    Username = edt_username.Text,
-                    Password = edt_password.Text,
-                    
-
-                };
-                if(comboBox1.Text=="نائب رائيس")
-                {
-                    
-                    add.RoleID=1;
-                }
-                if (comboBox1.Text == "موظف")
-                {
-                    add.RoleID = 2;
-                }
-                db.Entry(add).State = System.Data.Entity.EntityState.Added;
-                db.SaveChanges();
-                //this.Close();
-                
-
-            }
-            catch
-            {
-               
-
-            }
-        }
-
-
         private void btn_saveAndClose_Click(object sender, EventArgs e)
         {
             db.SaveChanges();
@@ -148,6 +30,58 @@ namespace AMS_PRO_MAX
         private void btn_saveUser_Click(object sender, EventArgs e)
         {
             Save();
+        }
+        private bool Save()
+        {
+            // check fields
+            try
+            {
+                if (!ValidationHelper.ValidateAllFields(edt_name.Text, edt_username.Text, edt_password.Text, comboBox1.Text))
+                {
+
+                    if (DatabaseHelper.CheckDuplicateData(edt_username.Text) == true)
+                    {
+                        AddData();
+
+                        DialogHelper.ShowDialog(this, "تمت اضافة مستخدم جديد من قبل " + name_user());
+                        return true;
+
+                    }
+
+                    DialogHelper.ShowDialog(this, "اسم المستخدم مكرر"); return false;
+
+                }
+
+                DialogHelper.ShowDialog(this, "اكمل الحقل لطفا");
+
+                return false;
+            }
+            catch
+            {
+                MessageBox.Show("يوجد مشكلة في الاضافة");
+                return false;
+            }
+           
+        }
+        private void AddData()
+        {
+            try
+            {
+                Users newUser = new Users();
+                newUser.Username = edt_name.Text;
+                newUser.Password = edt_username.Text;
+                newUser.Fullname = edt_password.Text;
+                newUser.State = false;
+                newUser.RoleID = RoleHelper.GetRoleId(comboBox1.Text);
+
+                DatabaseHelper.SaveUser(newUser);
+
+            }
+            catch
+            {
+                MessageBox.Show("no server");
+
+            }
         }
         public string name_user()
         {
