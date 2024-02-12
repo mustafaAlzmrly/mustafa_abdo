@@ -29,5 +29,6 @@ namespace AMS_PRO_MAX
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
+        public string RoleName { get; internal set; }
     }
 }

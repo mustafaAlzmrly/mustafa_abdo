@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMS_PRO_MAX.exe" size="3158528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMS_PRO_MAX.exe" size="3159552">
       <assemblyIdentity name="AMS_PRO_MAX" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DaDrt7dhP4vpbj4387lvrZp5lJCSZBTcRIOzMCmPhsA=</dsig:DigestValue>
+        <dsig:DigestValue>F3r517ZyrfUuk55shdSZX70Of7BvTpS0dbQGvJ23SJM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

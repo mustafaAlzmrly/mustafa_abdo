@@ -8,9 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace AMS_PRO_MAX
 {
-    public partial class FRM_Alert : Form
+    public partial class FRM_Alert : Form  
     {
         
         Cls_alert d = new Cls_alert();
@@ -89,6 +91,10 @@ namespace AMS_PRO_MAX
 
         }
 
+        private void FRM_Alert_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1.IsPageDisplayed = false;
 
+        }
     }
 }

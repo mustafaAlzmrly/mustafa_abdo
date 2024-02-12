@@ -153,7 +153,7 @@ namespace AMS_PRO_MAX
             if (dataGridView1.RowCount > 0)
             {
                 int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                DatabaseHelper.EditShow(id, this);
+                DatabaseHelper.EditShow(id, this,fullname);
 
             }
             else

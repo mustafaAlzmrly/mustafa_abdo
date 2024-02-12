@@ -506,6 +506,7 @@ namespace AMS_PRO_MAX
             this.button2.Text = "المبيعات";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -565,6 +566,7 @@ namespace AMS_PRO_MAX
             this.button10.Text = "الفواتير";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // btn_alert
             // 

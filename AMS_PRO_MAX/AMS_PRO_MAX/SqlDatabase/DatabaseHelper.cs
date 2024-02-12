@@ -11,6 +11,7 @@ namespace AMS_PRO_MAX
     public static class DatabaseHelper
     {
         public static string mess;
+        
 
         //////////////user/////////////
         public static void SaveUser(Users newUser)
@@ -42,36 +43,30 @@ namespace AMS_PRO_MAX
         {
             try
             {
+                // استخدام قاعدة البيانات
                 using (var db = new DB_AMS_PROEntities5())
                 {
+
+                    // البحث عن المستخدم
                     var user = db.Users.Where(x => x.Username == username && x.Password == pass).FirstOrDefault();
                     if (user != null)
                     {
-                        string roleText = RoleHelper.GetRoleText(user.RoleID.Value);
-                        if (!string.IsNullOrEmpty(roleText))
-                        {
-                            main.txt_role.Text = roleText;
-                        }
-
-                        if (!RoleHelper.CanEditUsers(user.RoleID.Value))
-                        {
-                            main.btn_users.Enabled = false;
-                            main.button8.Enabled = false;
-                        }
-
-                        user.state = true;
+                        //طباعة وظيفة المسخدم الحالي في الواجهة الرائسية والاسم
+                        main.txt_role.Text = user.RoleName;
+                        main.txt_username.Text = user.Fullname;
 
                         db.Entry(user).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
 
-                        main.txt_username.Text = user.Fullname;
-                        main.getfullname(user);
+                        main.getUser(user);
+                        //اظهار الواجهة الرئسية
                         main.Show();
 
                         login.Hide();
                     }
                     else
                     {
+                        // اذخل المعلومات غير صحيحة
                         DialogHelper.ShowDialog(login, "خطأ في معلومات تسجيل الدخول");
                     }
                 }
@@ -80,8 +75,6 @@ namespace AMS_PRO_MAX
             {
 
             }
-
-
         }
         public static bool CheckDuplicateData(string username)
         {
@@ -190,7 +183,7 @@ namespace AMS_PRO_MAX
             }
            
         }
-        public static void EditShow(int itemId,Form frm)
+        public static void EditShow(int itemId,Form frm,string fullname)
         {
             using (var db = new DB_AMS_PROEntities5())
             {
@@ -198,7 +191,8 @@ namespace AMS_PRO_MAX
                 if (item != null)
                 {
                     FRM_ADD editForm = new FRM_ADD();
-                    editForm.id = itemId;
+                    FRM_ADD.id = itemId;
+                    FRM_ADD.fullname = fullname;
                     editForm.txt_name.Text = item.Name;
                     editForm.txt_qun.Text = item.QuantityAvailable.ToString();
                     editForm.txt_price.Text = item.Price.ToString();
@@ -213,7 +207,7 @@ namespace AMS_PRO_MAX
                 }
             }
         }
-        public static void EditSelectedItem(int id, FRM_ADD frm)
+        public static void EditSelectedItem( int id, FRM_ADD frm , string fullname)
         {
 
             try
@@ -221,7 +215,7 @@ namespace AMS_PRO_MAX
                 
                 using (DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5())
                 {
-                    Item item = db.Items.Find(id);
+                    var item = db.Items.Find(id);
                     if (item != null)
                     {
 
@@ -232,37 +226,42 @@ namespace AMS_PRO_MAX
                             isFieldsValid = false;
                             mess = "يرجى إدخال الاسم";
                         }
-
-                        if (string.IsNullOrEmpty(frm.txt_price.Text))
+                        else if (string.IsNullOrEmpty(frm.txt_price.Text))
                         {
                             isFieldsValid = false;
                             mess = "يرجى إدخال السعر";
                         }
-
-                        if (string.IsNullOrEmpty(frm.txt_qun.Text))
+                        else if (string.IsNullOrEmpty(frm.txt_qun.Text))
                         {
                             isFieldsValid = false;
                             mess = "يرجى إدخال الكمية";
                         }
-
-                        if (string.IsNullOrEmpty(frm.txt_dat.Text))
+                        else if (string.IsNullOrEmpty(frm.txt_dat.Text))
                         {
                             isFieldsValid = false;
                             mess = "يرجى إدخال تاريخ الصلاحية";
                         }
+
+
 
                         if (isFieldsValid)
                         {
 
                             item.Name = frm.txt_name.Text;
                             item.QuantityAvailable = Convert.ToInt32(frm.txt_qun.Text);
-                            //item.Price = Convert.ToInt32(frm.txt_price.Text);
+                            item.Price = (decimal)Convert.ToDouble(frm.txt_price.Text);
                             item.Description = frm.txt_des.Text;
                             item.ExpiryDate = Convert.ToDateTime(frm.txt_dat.Text);
-                            
+
+                            Log log = new Log();
+
+                            log.Edit(fullname,id);
+
                             db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                             db.SaveChanges();
                             DialogHelper.ShowDetails("تم تعديل الصنف");
+
+                            
 
                         }
                         else
@@ -294,15 +293,10 @@ namespace AMS_PRO_MAX
 
                         if (item != null)
                         {
-                            Log log = new Log()
-                            {
-                                Fullname = fullname,
-                                Title = "عملية حذف",
-                                Details = "تم حذف الصنف ذي الرقم التعريفي " + itemId.ToString(),
-                                Timestamp = DateTime.Now,
-                            };
+                            Log log = new Log();
 
-                            db.Logs.Add(log);
+                            log.delete(fullname, itemId);
+
                             db.Items.Remove(item); // حذف العنصر من قاعدة البيانات
                         }
                     }

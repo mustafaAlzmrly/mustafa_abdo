@@ -124,6 +124,7 @@ namespace AMS_PRO_MAX
             this.txt_pass.Size = new System.Drawing.Size(474, 45);
             this.txt_pass.TabIndex = 2;
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_pass.TextChanged += new System.EventHandler(this.txt_pass_TextChanged);
             // 
             // Login
             // 

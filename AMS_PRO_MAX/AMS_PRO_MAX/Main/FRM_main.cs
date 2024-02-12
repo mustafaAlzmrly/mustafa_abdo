@@ -32,7 +32,7 @@ namespace AMS_PRO_MAX
             InitializeComponent();
             user1 = user;
         }
-        public void getfullname(User user)
+        public void getUser(User user)
         {
              
             fullname= user.Fullname;
@@ -146,14 +146,23 @@ namespace AMS_PRO_MAX
             FRM_ADDuser fru = new FRM_ADDuser();
             fru.Show();
         }
-
+        public static bool IsPageDisplayed = false;
         private void button11_Click(object sender, EventArgs e)
         {
+            if(!IsPageDisplayed)
+            {
             alert = new Cls_alert();
             alert.alert();
             FRM_Alert fal = new FRM_Alert();
             fal.Show();
             txt_cot_alert.Text = Convert.ToString(db.Alerts.Count());
+                IsPageDisplayed = true;
+            }
+            else
+            {
+                Console.WriteLine("الصفحة تم عرضها مسبقا");
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -195,10 +204,9 @@ namespace AMS_PRO_MAX
         {
 
         }
-        public string usern()
-        {
-            return txt_username.Text;
-        }
+
+        public string usern() { return Convert.ToString(txt_username.Text);
+        } 
 
         private void txt_cot_alert_Click(object sender, EventArgs e)
         {
@@ -241,18 +249,12 @@ namespace AMS_PRO_MAX
 
         private void button10_Click_1(object sender, EventArgs e)
         {  
-            dialo = new dialog();
-            dialo.label6.Text = "ستتوفر قريباً";
-            dialo.timer1.Interval = 500;
-            dialo.Show();
+
         }
 
         private void button9(object sender, EventArgs e)
         {
-            dialo = new dialog();
-            dialo.label6.Text = "ستتوفر قريباً";
-            dialo.timer1.Interval = 500;
-            dialo.Show();
+
         }
 
         private void txt_username_Click(object sender, EventArgs e)
@@ -272,12 +274,35 @@ namespace AMS_PRO_MAX
         {
 
         }
-
+        public static bool IsPageLogDisplayed = false;
         private void btn_logs_Click(object sender, EventArgs e)
         {
+            if(!IsPageLogDisplayed)
+            {
+                
             logs = new Logs.Logs();
             logs.Show();
+                IsPageLogDisplayed = true;
+            }
+
             
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            dialo = new dialog();
+            dialo.label6.Text = "ستتوفر قريباً";
+            dialo.timer1.Interval = 500;
+            dialo.Show();
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            dialo = new dialog();
+            dialo.label6.Text = "ستتوفر قريباً";
+            dialo.timer1.Interval = 500;
+            dialo.Show();
         }
     }
 }

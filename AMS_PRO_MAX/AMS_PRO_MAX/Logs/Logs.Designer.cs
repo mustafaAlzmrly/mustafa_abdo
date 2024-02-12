@@ -32,17 +32,17 @@ namespace AMS_PRO_MAX.Logs
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dB_AMS_PRODataSet4 = new AMS_PRO_MAX.DB_AMS_PRODataSet4();
-            this.logsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logsTableAdapter = new AMS_PRO_MAX.DB_AMS_PRODataSet4TableAdapters.LogsTableAdapter();
             this.logIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_AMS_PRODataSet4 = new AMS_PRO_MAX.DB_AMS_PRODataSet4();
+            this.logsTableAdapter = new AMS_PRO_MAX.DB_AMS_PRODataSet4TableAdapters.LogsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,20 +72,6 @@ namespace AMS_PRO_MAX.Logs
             this.dataGridView1.Size = new System.Drawing.Size(1079, 282);
             this.dataGridView1.TabIndex = 1;
             // 
-            // dB_AMS_PRODataSet4
-            // 
-            this.dB_AMS_PRODataSet4.DataSetName = "DB_AMS_PRODataSet4";
-            this.dB_AMS_PRODataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // logsBindingSource
-            // 
-            this.logsBindingSource.DataMember = "Logs";
-            this.logsBindingSource.DataSource = this.dB_AMS_PRODataSet4;
-            // 
-            // logsTableAdapter
-            // 
-            this.logsTableAdapter.ClearBeforeFill = true;
-            // 
             // logIDDataGridViewTextBoxColumn
             // 
             this.logIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -94,6 +80,7 @@ namespace AMS_PRO_MAX.Logs
             this.logIDDataGridViewTextBoxColumn.HeaderText = "LogID";
             this.logIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.logIDDataGridViewTextBoxColumn.Name = "logIDDataGridViewTextBoxColumn";
+            this.logIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // fullnameDataGridViewTextBoxColumn
             // 
@@ -127,6 +114,20 @@ namespace AMS_PRO_MAX.Logs
             this.timestampDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.timestampDataGridViewTextBoxColumn.Name = "timestampDataGridViewTextBoxColumn";
             // 
+            // logsBindingSource
+            // 
+            this.logsBindingSource.DataMember = "Logs";
+            this.logsBindingSource.DataSource = this.dB_AMS_PRODataSet4;
+            // 
+            // dB_AMS_PRODataSet4
+            // 
+            this.dB_AMS_PRODataSet4.DataSetName = "DB_AMS_PRODataSet4";
+            this.dB_AMS_PRODataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // logsTableAdapter
+            // 
+            this.logsTableAdapter.ClearBeforeFill = true;
+            // 
             // Logs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -139,10 +140,11 @@ namespace AMS_PRO_MAX.Logs
             this.RightToLeftLayout = true;
             this.ShowInTaskbar = false;
             this.Text = "Logs";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Logs_FormClosed);
             this.Load += new System.EventHandler(this.Logs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AMS_PRODataSet4)).EndInit();
             this.ResumeLayout(false);
 
         }

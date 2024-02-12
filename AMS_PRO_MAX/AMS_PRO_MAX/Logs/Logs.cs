@@ -24,5 +24,10 @@ namespace AMS_PRO_MAX.Logs
             // TODO: This line of code loads data into the 'dB_AMS_PRODataSet4.Logs' table. You can move, or remove it, as needed.
             
         }
+
+        private void Logs_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1.IsPageLogDisplayed = false;
+        }
     }
 }

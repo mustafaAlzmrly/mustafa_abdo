@@ -16,7 +16,10 @@ namespace AMS_PRO_MAX
         
         
 
-        public int id;
+        public static int id=0;
+
+        public static string fullname = "";
+
 
         public FRM_ADD()
         {
@@ -36,13 +39,17 @@ namespace AMS_PRO_MAX
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            if (btn_add.Text == "اضافة")
+            {
+                id = 0;
+            }
             if(id==0)
             {
                 DatabaseHelper.AddNewItem(this);
             }
             else
             {
-                DatabaseHelper.EditSelectedItem(id,this);
+                DatabaseHelper.EditSelectedItem(id,this,fullname);
             }
           
         }

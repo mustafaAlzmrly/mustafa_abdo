@@ -36,11 +36,20 @@ namespace AMS_PRO_MAX
             // check fields
             try
             {
+                //التحقق اذا المستخدم لم يدخل كلمة المرور او اسم
                 if (!ValidationHelper.CheckIsEmpty(txt_username.Text, txt_pass.Text))
                 {
-                    AddData();
+                    main = new Form1();
+                    var username = txt_username.Text;
+                    var password = txt_pass.Text;
+
+                    //مقارنة بيانات المستخدم في قاعدة البيانات اذا صحيحة يفتح الوجهة الرئسية
+                    DatabaseHelper.CheckUser(username, password, this, main);
+
+                    
                     return true;
                 }
+                // هده الكلاس يظهر رسالة في الواجهة
                 DialogHelper.ShowDialog(this, "الحقل مطلوب");
                 return false;
             }
@@ -51,24 +60,6 @@ namespace AMS_PRO_MAX
             }
             
         }
-        private void AddData()
-        {
-            
-            try
-            {
-                main = new Form1();
-                var username = txt_username.Text;
-                var password = txt_pass.Text;
-
-                DatabaseHelper.CheckUser(username, password, this, main);
-               
-            }
-            catch
-            {
-
-                MessageBox.Show("no server");
-            }
-        }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e) {   }
 
@@ -78,6 +69,9 @@ namespace AMS_PRO_MAX
 
         private void Login_Leave(object sender, EventArgs e)  { }
 
+        private void txt_pass_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

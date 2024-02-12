@@ -26,5 +26,10 @@ namespace AMS_PRO_MAX
         {
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
