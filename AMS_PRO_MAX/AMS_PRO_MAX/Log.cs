@@ -19,20 +19,5 @@ namespace AMS_PRO_MAX
         public string Title { get; set; }
         public string Details { get; set; }
         public Nullable<System.DateTime> Timestamp { get; set; }
-
-        public void Edit(string fullname , int id)
-        {
-            Fullname = fullname;
-            Title = "ÚãáíÉ ÊÚÏíá";
-            Details = "Êã ÊÚÏíá ÇáÕäİ Ğí ÇáÑŞã ÇáÊÚÑíİí " + id.ToString();
-            Timestamp = DateTime.Now;
-        }
-        public void delete(string fullname, int id)
-        {
-            Fullname = fullname;
-            Title = "ÚãáíÉ ÍĞİ";
-            Details = "Êã ÍĞİ ÇáÕäİ Ğí ÇáÑŞã ÇáÊÚÑíİí " + id.ToString();
-            Timestamp = DateTime.Now;
-        }
     }
 }

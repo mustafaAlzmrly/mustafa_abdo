@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\AMS_PRO_MAX.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\AMS_PRO_MAX.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\AMS_PRO_MAX.csproj",
+        "projectName": "AMS_PRO_MAX",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\AMS_PRO_MAX.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.7.301.18, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

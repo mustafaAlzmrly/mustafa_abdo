@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro_max\\sqldatabase\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|solutionrelative:ams_pro_max\\sqldatabase\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro_max\\itemp\\condittionsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|solutionrelative:ams_pro_max\\itemp\\condittionsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C94ECAA-EBF9-4138-AC8F-F017E73F76D4}|AMS_PRO.Test\\AMS_PRO.Test.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro.test\\itemtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C94ECAA-EBF9-4138-AC8F-F017E73F76D4}|AMS_PRO.Test\\AMS_PRO.Test.csproj|solutionrelative:ams_pro.test\\itemtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C94ECAA-EBF9-4138-AC8F-F017E73F76D4}|AMS_PRO.Test\\AMS_PRO.Test.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro.test\\usertest\\itmtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C94ECAA-EBF9-4138-AC8F-F017E73F76D4}|AMS_PRO.Test\\AMS_PRO.Test.csproj|solutionrelative:ams_pro.test\\usertest\\itmtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro_max\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|solutionrelative:ams_pro_max\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro_max\\itemp\\frm_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|solutionrelative:ams_pro_max\\itemp\\frm_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro_max\\itemp\\frm_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8977968-B0D4-42B3-ADDA-55B2EE090D4B}|AMS_PRO_MAX\\AMS_PRO_MAX.csproj|solutionrelative:ams_pro_max\\itemp\\frm_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C94ECAA-EBF9-4138-AC8F-F017E73F76D4}|AMS_PRO.Test\\AMS_PRO.Test.csproj|c:\\users\\user\\source\\repos\\mustafaalzmrly\\mustafa_abdo\\ams_pro_max\\ams_pro.test\\usertest\\logintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C94ECAA-EBF9-4138-AC8F-F017E73F76D4}|AMS_PRO.Test\\AMS_PRO.Test.csproj|solutionrelative:ams_pro.test\\usertest\\logintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\Item.cs",
+              "RelativeDocumentMoniker": "AMS_PRO_MAX\\Item.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\Item.cs",
+              "RelativeToolTip": "AMS_PRO_MAX\\Item.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAtwBsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T00:03:46.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "condittionsItem.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\ItemP\\condittionsItem.cs",
+              "RelativeDocumentMoniker": "AMS_PRO_MAX\\ItemP\\condittionsItem.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\ItemP\\condittionsItem.cs",
+              "RelativeToolTip": "AMS_PRO_MAX\\ItemP\\condittionsItem.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBgAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T23:30:37.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "itemTest.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO.Test\\itemTest.cs",
+              "RelativeDocumentMoniker": "AMS_PRO.Test\\itemTest.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO.Test\\itemTest.cs",
+              "RelativeToolTip": "AMS_PRO.Test\\itemTest.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T16:04:45.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "itmTest.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Source\\Repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO.Test\\UserTest\\itmTest.cs",
+              "RelativeDocumentMoniker": "AMS_PRO.Test\\UserTest\\itmTest.cs",
+              "ToolTip": "C:\\Users\\USER\\Source\\Repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO.Test\\UserTest\\itmTest.cs",
+              "RelativeToolTip": "AMS_PRO.Test\\UserTest\\itmTest.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAIA7wBYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T18:12:44.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\SqlDatabase\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "AMS_PRO_MAX\\SqlDatabase\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\SqlDatabase\\DatabaseHelper.cs",
+              "RelativeToolTip": "AMS_PRO_MAX\\SqlDatabase\\DatabaseHelper.cs",
+              "ViewState": "AQIAALMAAAAAAAAAAAArwMIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:29:34.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FRM_ADD.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\ItemP\\FRM_ADD.cs",
+              "RelativeDocumentMoniker": "AMS_PRO_MAX\\ItemP\\FRM_ADD.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\ItemP\\FRM_ADD.cs [Design]",
+              "RelativeToolTip": "AMS_PRO_MAX\\ItemP\\FRM_ADD.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T16:23:43.641Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FRM_ADD.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\ItemP\\FRM_ADD.cs",
+              "RelativeDocumentMoniker": "AMS_PRO_MAX\\ItemP\\FRM_ADD.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\ItemP\\FRM_ADD.cs",
+              "RelativeToolTip": "AMS_PRO_MAX\\ItemP\\FRM_ADD.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAADgvy8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T16:23:45.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "loginTest.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO.Test\\UserTest\\loginTest.cs",
+              "RelativeDocumentMoniker": "AMS_PRO.Test\\UserTest\\loginTest.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO.Test\\UserTest\\loginTest.cs",
+              "RelativeToolTip": "AMS_PRO.Test\\UserTest\\loginTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T17:57:29.877Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

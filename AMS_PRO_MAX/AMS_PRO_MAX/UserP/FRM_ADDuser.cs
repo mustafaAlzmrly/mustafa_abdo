@@ -14,7 +14,7 @@ namespace AMS_PRO_MAX
     public partial class FRM_ADDuser : Form
     {
         public string name;
-        DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5();
+        DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6();
         public int id;
         public FRM_ADDuser()
         {

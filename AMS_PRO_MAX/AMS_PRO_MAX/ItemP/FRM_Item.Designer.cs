@@ -66,7 +66,7 @@ namespace AMS_PRO_MAX
             this.pn_cat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pn_cat.Location = new System.Drawing.Point(0, 0);
             this.pn_cat.Name = "pn_cat";
-            this.pn_cat.Size = new System.Drawing.Size(1266, 713);
+            this.pn_cat.Size = new System.Drawing.Size(1447, 713);
             this.pn_cat.TabIndex = 1;
             this.pn_cat.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_cat_Paint);
             // 
@@ -91,7 +91,7 @@ namespace AMS_PRO_MAX
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersWidth = 40;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1266, 623);
+            this.dataGridView1.Size = new System.Drawing.Size(1447, 623);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -167,7 +167,7 @@ namespace AMS_PRO_MAX
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 623);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 90);
+            this.panel1.Size = new System.Drawing.Size(1447, 90);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -176,10 +176,10 @@ namespace AMS_PRO_MAX
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Image = global::AMS_PRO_MAX.Properties.Resources.icons8_add_38px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1043, 7);
+            this.button1.Location = new System.Drawing.Point(1192, 7);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(3);
-            this.button1.Size = new System.Drawing.Size(200, 76);
+            this.button1.Size = new System.Drawing.Size(229, 76);
             this.button1.TabIndex = 3;
             this.button1.Text = "اضافة";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,10 +191,10 @@ namespace AMS_PRO_MAX
             this.btn_eidit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_eidit.Image = global::AMS_PRO_MAX.Properties.Resources.icons8_edit_38px;
             this.btn_eidit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eidit.Location = new System.Drawing.Point(837, 7);
+            this.btn_eidit.Location = new System.Drawing.Point(957, 7);
             this.btn_eidit.Name = "btn_eidit";
             this.btn_eidit.Padding = new System.Windows.Forms.Padding(3);
-            this.btn_eidit.Size = new System.Drawing.Size(200, 76);
+            this.btn_eidit.Size = new System.Drawing.Size(229, 76);
             this.btn_eidit.TabIndex = 4;
             this.btn_eidit.Text = "تعديل";
             this.btn_eidit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -206,12 +206,12 @@ namespace AMS_PRO_MAX
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txt_sear);
             this.panel2.Controls.Add(this.btn_sear);
-            this.panel2.Location = new System.Drawing.Point(69, 13);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
+            this.panel2.Location = new System.Drawing.Point(79, 13);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
             this.panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel2.Size = new System.Drawing.Size(401, 64);
+            this.panel2.Size = new System.Drawing.Size(458, 64);
             this.panel2.TabIndex = 9;
             // 
             // txt_sear
@@ -220,7 +220,7 @@ namespace AMS_PRO_MAX
             this.txt_sear.Font = new System.Drawing.Font("Segoe UI", 23F);
             this.txt_sear.Location = new System.Drawing.Point(3, 3);
             this.txt_sear.Name = "txt_sear";
-            this.txt_sear.Size = new System.Drawing.Size(331, 58);
+            this.txt_sear.Size = new System.Drawing.Size(379, 58);
             this.txt_sear.TabIndex = 4;
             // 
             // btn_sear
@@ -230,10 +230,10 @@ namespace AMS_PRO_MAX
             this.btn_sear.FlatAppearance.BorderSize = 0;
             this.btn_sear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sear.Image = global::AMS_PRO_MAX.Properties.Resources.icons8_search_38px;
-            this.btn_sear.Location = new System.Drawing.Point(334, 3);
+            this.btn_sear.Location = new System.Drawing.Point(382, 3);
             this.btn_sear.Margin = new System.Windows.Forms.Padding(0);
             this.btn_sear.Name = "btn_sear";
-            this.btn_sear.Size = new System.Drawing.Size(62, 56);
+            this.btn_sear.Size = new System.Drawing.Size(71, 56);
             this.btn_sear.TabIndex = 8;
             this.btn_sear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_sear.UseVisualStyleBackColor = false;
@@ -244,10 +244,10 @@ namespace AMS_PRO_MAX
             this.btn_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_delete.Image = global::AMS_PRO_MAX.Properties.Resources.icons8_delete_38px;
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(631, 7);
+            this.btn_delete.Location = new System.Drawing.Point(721, 7);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Padding = new System.Windows.Forms.Padding(3);
-            this.btn_delete.Size = new System.Drawing.Size(200, 76);
+            this.btn_delete.Size = new System.Drawing.Size(229, 76);
             this.btn_delete.TabIndex = 5;
             this.btn_delete.Text = "حذف";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -258,10 +258,10 @@ namespace AMS_PRO_MAX
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Image = global::AMS_PRO_MAX.Properties.Resources.icons8_rotate_right_38px;
-            this.button4.Location = new System.Drawing.Point(476, 7);
+            this.button4.Location = new System.Drawing.Point(544, 7);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(3);
-            this.button4.Size = new System.Drawing.Size(149, 76);
+            this.button4.Size = new System.Drawing.Size(170, 76);
             this.button4.TabIndex = 6;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -272,9 +272,9 @@ namespace AMS_PRO_MAX
             // 
             // FRM_HOME
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 713);
+            this.ClientSize = new System.Drawing.Size(1447, 713);
             this.Controls.Add(this.pn_cat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_HOME";

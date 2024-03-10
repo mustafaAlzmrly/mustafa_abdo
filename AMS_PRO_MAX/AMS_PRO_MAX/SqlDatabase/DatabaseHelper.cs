@@ -5,10 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using AMS_PRO_MAX.UserP;
 using System.Windows.Forms;
+using AMS_PRO_MAX;
+using Amazon.DynamoDBv2.Model;
+using System.Data.Entity;
+using AMS_PRO_MAX.ItemP;
 
 namespace AMS_PRO_MAX
 {
-    public static class DatabaseHelper
+    public static  class DatabaseHelper
     {
         public static string mess;
         
@@ -18,7 +22,7 @@ namespace AMS_PRO_MAX
         {
             try
             {
-                using (DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5())
+                using (DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6())
                 {
                     User add = new User()
                     {
@@ -44,7 +48,7 @@ namespace AMS_PRO_MAX
             try
             {
                 // استخدام قاعدة البيانات
-                using (var db = new DB_AMS_PROEntities5())
+                using (var db = new DB_AMS_PROEntities6())
                 {
 
                     // البحث عن المستخدم
@@ -52,8 +56,9 @@ namespace AMS_PRO_MAX
                     if (user != null)
                     {
                         //طباعة وظيفة المسخدم الحالي في الواجهة الرائسية والاسم
-                        main.txt_role.Text = user.RoleName;
+                       // main.txt_role.Text = user.RoleName;
                         main.txt_username.Text = user.Fullname;
+                        user.state = true;
 
                         db.Entry(user).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
@@ -80,7 +85,7 @@ namespace AMS_PRO_MAX
         {
             try
             {
-                using (DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5())
+                using (DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6())
                 {
                     User add = new User();
                     add = db.Users.Where(x => x.Username == username).FirstOrDefault();
@@ -108,7 +113,7 @@ namespace AMS_PRO_MAX
         /////////////Alert fun/////////
         public static void DeleteAlerts(List<int> alertIds)
         {
-            using (var db = new DB_AMS_PROEntities5())
+            using (var db = new DB_AMS_PROEntities6())
             {
                 foreach (var id in alertIds)
                 {
@@ -125,7 +130,7 @@ namespace AMS_PRO_MAX
         /////////////Item Fun//////////
         public static List<Item> SearchItems(string searchTerm)
         {
-            using (var db = new DB_AMS_PROEntities5())
+            using (var db = new DB_AMS_PROEntities6())
             {
                 var searchResults = db.Items.Where(item =>
                     item.Name.ToString().Contains(searchTerm) ||
@@ -138,26 +143,32 @@ namespace AMS_PRO_MAX
                 return searchResults;
             }
         }
-        public static void AddNewItem(FRM_ADD frm)
+        public static string ex="يرجا ملء البيانات";
+        public static  void AddNewItem(FRM_ADD frm)
         {
             try
             {
                 Item tb_item = new Item();
+                
+                
                 if (string.IsNullOrEmpty(frm.txt_name.Text) || string.IsNullOrEmpty(frm.txt_price.Text) ||
-                           string.IsNullOrEmpty(frm.txt_qun.Text) || string.IsNullOrEmpty(frm.txt_dat.Text))
+                           string.IsNullOrEmpty(frm.txt_qun.Text) || condittionsItem.priceTest(frm,ref ex))
                 {
-                    DialogHelper.ShowDialog(frm, "يرجى ملء جميع الحقول");
+                   
+                    throw new ArgumentException(ex);
+                    
+
 
                 }
                 else
                 {
-                    using (var db = new DB_AMS_PROEntities5())
+                    using (var db = new DB_AMS_PROEntities6())
                     {
                         var existingItem = db.Items.FirstOrDefault(item => item.Name == frm.txt_name.Text);
                         if (existingItem != null)
                         {
                             DialogHelper.ShowDialog(frm, "اسم الصنف مكرر");
-
+                            throw new DuplicateItemException("اسم الصنف مكرر");
                         }
                         else
                         {
@@ -177,15 +188,31 @@ namespace AMS_PRO_MAX
                     
                 }
             }
+            catch (ArgumentException ex)
+            {
+                DialogHelper.ShowDialog(frm, ex.Message);
+
+              //  throw new ArgumentException(ex.Message);
+            }
+            catch (DuplicateItemException ex)
+            {
+               // throw ;
+            }
             catch
             {
-                MessageBox.Show("no server");
+                DialogHelper.ShowDialog(frm, "فشل الاتصال بالخادم");
+               // throw new ServerConnectionException("فشل الاتصال بالخادم");
             }
            
         }
+        public static bool ItemExists(string name)
+        {
+            DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6();
+            return db.Items.Any(item => item.Name == name);
+        }
         public static void EditShow(int itemId,Form frm,string fullname)
         {
-            using (var db = new DB_AMS_PROEntities5())
+            using (var db = new DB_AMS_PROEntities6())
             {
                 var item = db.Items.Find(itemId);
                 if (item != null)
@@ -213,7 +240,7 @@ namespace AMS_PRO_MAX
             try
             {
                 
-                using (DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5())
+                using (DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6())
                 {
                     var item = db.Items.Find(id);
                     if (item != null)
@@ -255,7 +282,7 @@ namespace AMS_PRO_MAX
 
                             Log log = new Log();
 
-                            log.Edit(fullname,id);
+                            //log.Edit(fullname,id);
 
                             db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                             db.SaveChanges();
@@ -281,7 +308,7 @@ namespace AMS_PRO_MAX
 
         public static void DeleteSelectedItems(List<int> itemIds, string fullname, Form form)
         {
-            using (var db = new DB_AMS_PROEntities5())
+            using (var db = new DB_AMS_PROEntities6())
             {
                 var dialogResult = MessageBox.Show("هل أنت متأكد من هذا الإجراء؟ لا يمكن استرجاع البيانات، سيتم حذف جميع البيانات المرتبطة", "إجراء الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -295,7 +322,7 @@ namespace AMS_PRO_MAX
                         {
                             Log log = new Log();
 
-                            log.delete(fullname, itemId);
+                           // log.delete(fullname, itemId);
 
                             db.Items.Remove(item); // حذف العنصر من قاعدة البيانات
                         }
@@ -307,7 +334,126 @@ namespace AMS_PRO_MAX
             }
         }
     }
+    public interface IDialogHelper
+    {
+        void ShowDialog(FRM_ADD frm, string message);
+        void ShowDetails(string message);
+    }
 
-            
-  
+    public interface IDBContext
+    {
+        IQueryable<Item> Items { get; }
+        int SaveChanges();
+    }
+
+    public interface IMessageBoxHelper
+    {
+        void Show(string message);
+    }
+
+    public interface Helper
+    {
+        bool ItemExists(string name);
+        void AddItem(string name, int quantity, int price, string description, DateTime expiryDate);
+    }
+
+}
+public interface IDialogHelper
+{
+    void ShowDialog(FRM_ADD frm, string message);
+    void ShowDetails(string details);
+}
+
+
+
+public class DialogHelper
+{
+    public static void ShowDialog(FRM_ADD frm, string message)
+    {
+        // Show dialog logic here
+    }
+
+    public static void ShowDetails(string details)
+    {
+        // Show details logic here
+    }
+}
+public class DuplicateItemException : Exception
+{
+   
+    public DuplicateItemException(string message) : base(message)
+    { 
+    }
+}
+public class ServerConnectionException : Exception
+{
+    
+    public ServerConnectionException(string message) : base(message)
+    {
+       
+    }
+}
+public class ItemManager
+{
+    private readonly IDatabaseHelper _databaseHelper;
+    private AMS_PRO_MAX.IDialogHelper @object;
+
+    public ItemManager(IDatabaseHelper databaseHelper)
+    {
+        _databaseHelper = databaseHelper;
+    }
+
+ 
+
+    public void AddNewItem(string name, int quantity, int price, string description, DateTime expiryDate)
+    {
+        if (string.IsNullOrEmpty(name) || quantity <= 0 || price <= 0 || expiryDate <= DateTime.Now)
+        {
+            throw new ArgumentException("Invalid item data");
+        }
+
+        if (_databaseHelper.ItemExists(name))
+        {
+            throw new DuplicateItemException("Item already exists");
+        }
+
+        _databaseHelper.AddItem(name, quantity, price, description, expiryDate);
+    }
+}
+
+public interface IDatabaseHelper
+{
+    bool ItemExists(string name);
+    void AddItem(string name, int quantity, int price, string description, DateTime expiryDate);
+}
+
+public class DatabaseHelper : IDatabaseHelper
+{
+    private readonly DB_AMS_PROEntities6 _dbContext;
+
+
+    public DatabaseHelper(DB_AMS_PROEntities6 dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    public bool ItemExists(string name)
+    {
+        return _dbContext.Items.Any(item => item.Name == name);
+    }
+
+    public void AddItem(string name, int quantity, int price, string description, DateTime expiryDate)
+    {
+        Item newItem = new Item()
+        {
+            Name = name,
+            QuantityAvailable = quantity,
+            Price = price,
+            Description = description,
+            ExpiryDate = expiryDate
+        };
+
+        _dbContext.Items.Add(newItem);
+        _dbContext.SaveChanges();
+    }
 }

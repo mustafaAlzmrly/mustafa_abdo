@@ -17,7 +17,7 @@ namespace AMS_PRO_MAX
         private List<int> Idlist = new List<int>();
         Form1 frm;
         //FRM_ADD eidt;
-        DB_AMS_PROEntities5 db;
+        DB_AMS_PROEntities6 db;
         Log log;
         
         
@@ -76,7 +76,7 @@ namespace AMS_PRO_MAX
 
         private void button4_Click(object sender, EventArgs e)
         {
-            db = new DB_AMS_PROEntities5();
+            db = new DB_AMS_PROEntities6();
             dataGridView1.DataSource = db.Items.ToList();
             frm = new Form1();
             frm.txt_cot_alert.Text = Convert.ToString(db.Alerts.Count());

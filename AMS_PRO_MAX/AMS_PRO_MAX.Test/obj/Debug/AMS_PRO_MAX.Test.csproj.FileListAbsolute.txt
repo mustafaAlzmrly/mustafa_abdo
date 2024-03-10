@@ -57,3 +57,10 @@ C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\Int
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\Interop.TxAgg.dll
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\AMS_PRO_MAX.Test.csproj.ResolveComReference.cache
 C:\Users\HP\source\repos\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\bin\Debug\EntityFramework.xml
+C:\Users\USER\source\repos\mustafaAlzmrly\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\AMS_PRO_MAX.Test.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\mustafaAlzmrly\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\Interop.DTSPipeline.dll
+C:\Users\USER\source\repos\mustafaAlzmrly\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\Interop.TxAgg.dll
+C:\Users\USER\source\repos\mustafaAlzmrly\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\AMS_PRO_MAX.Test.csproj.ResolveComReference.cache
+C:\Users\USER\source\repos\mustafaAlzmrly\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\AMS_PRO_MAX.Test.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\mustafaAlzmrly\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\AMS_PRO_MAX.Test.dll
+C:\Users\USER\source\repos\mustafaAlzmrly\mustafa_abdo\AMS_PRO_MAX\AMS_PRO_MAX.Test\obj\Debug\AMS_PRO_MAX.Test.pdb

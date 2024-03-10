@@ -15,7 +15,7 @@ namespace AMS_PRO_MAX
     public partial class Login : Form
     {
        // Cls_Login Logi;
-        public DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5();
+        public DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6();
         public Form1 main ;
         public int id;
         public User add;

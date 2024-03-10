@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "I9gn1xzEvweWQT90BPLu83mINHcOIen/ktsogHEhYPkDSHj7II7n4sZ8j3mnouayuUdlSYQr0appsb4vjv+hPA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USER\\source\\repos\\mustafaAlzmrly\\mustafa_abdo\\AMS_PRO_MAX\\AMS_PRO_MAX\\AMS_PRO_MAX.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\awssdk.core\\3.7.302.15\\awssdk.core.3.7.302.15.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\awssdk.dynamodbv2\\3.7.301.18\\awssdk.dynamodbv2.3.7.301.18.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

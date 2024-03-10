@@ -62,7 +62,7 @@ namespace AMS_PRO_MAX
             this.txt_role = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.item = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.btn_alert = new System.Windows.Forms.Button();
             this.txt_cot_alert = new System.Windows.Forms.Label();
@@ -135,7 +135,6 @@ namespace AMS_PRO_MAX
             this.frm_txt_user.TabIndex = 7;
             this.frm_txt_user.Text = "1";
             this.frm_txt_user.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.frm_txt_user.Click += new System.EventHandler(this.frm_txt_user_Click);
             // 
             // label3
             // 
@@ -147,7 +146,6 @@ namespace AMS_PRO_MAX
             this.label3.Size = new System.Drawing.Size(175, 41);
             this.label3.TabIndex = 3;
             this.label3.Text = "المستخدمون";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox3
             // 
@@ -203,7 +201,6 @@ namespace AMS_PRO_MAX
             this.label5.Size = new System.Drawing.Size(107, 41);
             this.label5.TabIndex = 4;
             this.label5.Text = "الفواتير";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox5
             // 
@@ -475,7 +472,6 @@ namespace AMS_PRO_MAX
             this.txt_username.TabIndex = 2;
             this.txt_username.Text = "مصطفى الازمرلي";
             this.txt_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txt_username.Click += new System.EventHandler(this.txt_username_Click);
             // 
             // txt_role
             // 
@@ -486,7 +482,6 @@ namespace AMS_PRO_MAX
             this.txt_role.Size = new System.Drawing.Size(64, 28);
             this.txt_role.TabIndex = 3;
             this.txt_role.Text = "الادمن";
-            this.txt_role.Click += new System.EventHandler(this.txt_role_Click);
             // 
             // button2
             // 
@@ -526,27 +521,27 @@ namespace AMS_PRO_MAX
             this.button1.Text = "الرائسية";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Home_Click);
             // 
-            // button3
+            // item
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Image = global::AMS_PRO_MAX.Properties.Resources.btn_categories_ImageOptions1;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 360);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(247, 64);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "الاصناف";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.item.FlatAppearance.BorderSize = 0;
+            this.item.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.item.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.item.ForeColor = System.Drawing.Color.DimGray;
+            this.item.Image = global::AMS_PRO_MAX.Properties.Resources.btn_categories_ImageOptions1;
+            this.item.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.item.Location = new System.Drawing.Point(3, 360);
+            this.item.Margin = new System.Windows.Forms.Padding(0);
+            this.item.Name = "item";
+            this.item.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.item.Size = new System.Drawing.Size(247, 64);
+            this.item.TabIndex = 21;
+            this.item.Text = "الاصناف";
+            this.item.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.item.UseVisualStyleBackColor = false;
+            this.item.Click += new System.EventHandler(this.item_Click);
             // 
             // button10
             // 
@@ -586,7 +581,7 @@ namespace AMS_PRO_MAX
             this.btn_alert.Text = "التنبيهات";
             this.btn_alert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_alert.UseVisualStyleBackColor = false;
-            this.btn_alert.Click += new System.EventHandler(this.button11_Click);
+            this.btn_alert.Click += new System.EventHandler(this.btn_alert_Click);
             // 
             // txt_cot_alert
             // 
@@ -611,7 +606,7 @@ namespace AMS_PRO_MAX
             this.pn_lift.Controls.Add(this.txt_cot_alert);
             this.pn_lift.Controls.Add(this.btn_alert);
             this.pn_lift.Controls.Add(this.button10);
-            this.pn_lift.Controls.Add(this.button3);
+            this.pn_lift.Controls.Add(this.item);
             this.pn_lift.Controls.Add(this.button1);
             this.pn_lift.Controls.Add(this.button2);
             this.pn_lift.Controls.Add(this.pn_up);
@@ -737,7 +732,7 @@ namespace AMS_PRO_MAX
         public System.Windows.Forms.Label txt_username;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button item;
         public System.Windows.Forms.Button button10;
         public System.Windows.Forms.Button btn_alert;
         public System.Windows.Forms.Label txt_cot_alert;

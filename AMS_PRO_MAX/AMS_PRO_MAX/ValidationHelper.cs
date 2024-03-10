@@ -20,7 +20,7 @@ namespace AMS_PRO_MAX
 
         public static bool IsUsernameDuplicate(string username)
         {
-            DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5();
+            DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6();
             var user = db.Users.FirstOrDefault(x => x.Username == username);
             return user != null;
         }

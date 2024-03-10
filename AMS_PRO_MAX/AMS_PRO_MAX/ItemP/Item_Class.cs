@@ -18,7 +18,7 @@ namespace AMS_PRO_MAX.ItemP
 
         public void EditItem(int itemId, string name, int quantity, decimal price, DateTime expiryDate, string description)
         {
-            using (var context = new DB_AMS_PROEntities5())
+            using (var context = new DB_AMS_PROEntities6())
             {
                 Item item = context.Items.Find(itemId);
                 if (item != null)
@@ -37,7 +37,7 @@ namespace AMS_PRO_MAX.ItemP
         // استدعاء الدالة DeleteItem
         public void DeleteItem(int itemId)
         {
-            using (var context = new DB_AMS_PROEntities5())
+            using (var context = new DB_AMS_PROEntities6())
             {
                 Item item = context.Items.Find(itemId);
                 if (item != null)

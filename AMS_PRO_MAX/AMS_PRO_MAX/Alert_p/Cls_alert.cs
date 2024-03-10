@@ -16,17 +16,17 @@ namespace AMS_PRO_MAX
 
         public void alert()
         {
-            DB_AMS_PROEntities5 db = new DB_AMS_PROEntities5();
+            DB_AMS_PROEntities6 db = new DB_AMS_PROEntities6();
         FRM_Alert alert = new FRM_Alert();
         Form1 main;
         dialog dialo;
-            db = new DB_AMS_PROEntities5();
+            db = new DB_AMS_PROEntities6();
             dialo = new dialog();
             alert = new FRM_Alert();
             alert.dataGridView1.DataSource = db.Alerts.ToList();
             try
             {
-                db = new DB_AMS_PROEntities5();
+                db = new DB_AMS_PROEntities6();
 
                 dialo = new dialog();
                 

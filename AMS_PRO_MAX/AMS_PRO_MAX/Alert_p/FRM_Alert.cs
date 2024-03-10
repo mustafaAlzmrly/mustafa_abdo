@@ -16,7 +16,7 @@ namespace AMS_PRO_MAX
     {
         
         Cls_alert d = new Cls_alert();
-        DB_AMS_PROEntities5 db;
+        DB_AMS_PROEntities6 db;
         Form1 frm;
         private List<int> Idlist = new List<int>();
         public FRM_Alert()
@@ -29,7 +29,7 @@ namespace AMS_PRO_MAX
             // TODO: This line of code loads data into the 'dB_AMS_PRODataSet4.Alerts' table. You can move, or remove it, as needed.
             this.alertsTableAdapter.Fill(this.dB_AMS_PRODataSet4.Alerts);
            
-            db = new DB_AMS_PROEntities5();
+            db = new DB_AMS_PROEntities6();
             dataGridView1.DataSource = db.Alerts.ToList();
 
         }
@@ -85,7 +85,7 @@ namespace AMS_PRO_MAX
         private void refresh(object sender, EventArgs e)
         {
             frm = new Form1();
-            db = new DB_AMS_PROEntities5();
+            db = new DB_AMS_PROEntities6();
             dataGridView1.DataSource = db.Alerts.ToList();
             frm.txt_cot_alert.Text = Convert.ToString(db.Alerts.Count());
 

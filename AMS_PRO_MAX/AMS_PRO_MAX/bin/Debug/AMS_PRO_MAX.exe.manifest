@@ -43,14 +43,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMS_PRO_MAX.exe" size="3159552">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMS_PRO_MAX.exe" size="3180544">
       <assemblyIdentity name="AMS_PRO_MAX" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F3r517ZyrfUuk55shdSZX70Of7BvTpS0dbQGvJ23SJM=</dsig:DigestValue>
+        <dsig:DigestValue>9TPPlmb2DimgF78vTl2s4DDHLb1AD7azxcuN48LyHHM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AWSSDK.Core.dll" size="2084464">
+      <assemblyIdentity name="AWSSDK.Core" version="3.3.0.0" publicKeyToken="885C28607F98E604" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nRCs8CmPoTqfObq5BjrTySq+cFt7jKb9dp88geVr94o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AWSSDK.DynamoDBv2.dll" size="799856">
+      <assemblyIdentity name="AWSSDK.DynamoDBv2" version="3.3.0.0" publicKeyToken="885C28607F98E604" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>EjH2eEjHbO/REuBSAxUcAnju23IcxwHxqfpk31330D8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,13 +126,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AMS_PRO_MAX.exe.config" size="2758">
+  <file name="AMS_PRO_MAX.exe.config" size="3114">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FqY7s7mF4/E2T8XgYT61bZdV2D/Y0uCQDPQhPKZdwD8=</dsig:DigestValue>
+      <dsig:DigestValue>7XZeFWb+qiHkE+JwKAxhuu6Him5nGXkofPC0U4AqKcU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="image\main-thumb-pb-1031889-200-lvdbswckoufagfajveqbjflhmfuazojc (1).ico" size="270398">
@@ -127,6 +151,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>0Y+dOYBzoJKiFmTnnhObbA46PEbBMQ2YmRK73xeP4HE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Model1.Context.tt" size="22930">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iH6jRm/ArXOO/wVogKb8ZOaRJ6DvCC6vOswudwQkDnQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Model1.tt" size="25275">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CabSpKm6yYNT6twBZzKHKM3v3aBYMgNzK0uSDYpHoWw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Model3.Context.tt" size="22930">
